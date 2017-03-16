@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <title>Simple Firebase Import Script</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+</head>
+
+<bod>
+
+    <!--[if lt IE 9]>
+      <div class="browserupgrade text-center bg-warning"><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p></div>
+    <![endif]-->
+
+  <article class="container">
+    <header class="jumbotron">
+      <h1>Simple Firebase Import Script</h1>
+      <p class="lead">Pushes an array of objects into Firebase one by one and generates individiual push keys for each new object.</p>
+      <ul>
+        <li>Add your Firebase config in the code of this file (can be found in your console)</li>
+        <li>Install and run http-server</li>
+        <li><code>npm install -g http-server</code></li>
+        <li><code>http-server</code></li>
+        <li>Navigate to <code>http://127.0.0.1:8080/</code></li>
+        <li>Choose the Firebase database reference where you want the array to be pushed e.g. <code>/products</code> or <code>/</code> for root.</li>
+        <li>Select your local JSON file containing the array and click <b>Import</b></li>
+      </ul>
+    </header>
+
+
+    <main>
+
+      <section class="row">
+
+        <form role="form" class="clear col-sm-6">
+          <fieldset>
+            <legend>Select file and Firebase DB path</legend>
+            <div class="form-group">
+              <label for="firebaseRef">Firebase Path (e.g. /entity/summary)</label>
+              <input type="text" class="form-control" id="firebaseRef" placeholder="/entity">
+            </div>
+            <div class="form-group">
+              <label for="fileInput">JSON File</label>
+              <input type="file" id="fileInput">
+              <p class="help-block">JSON file needs to contain a root array.</p>
+            </div>
+            <span class="btn btn-lg btn-primary btn-import">Import Now</span>
+          </fieldset>
+        </form>
+
+        <div class="col-sm-6">
+          <h4>Example JSON Data</h4>
+          <pre>[
+  {
+    "sku": 50037821,
+    "brand": "LG",
+    "categoryid": 186,
+    "catgrandparentid": 10,
+    "catparentid": 47,
+    "description": "No backlight for perfect blacks and explosive colours. Self-Lighting Pixels. webOS 2.0 Smart TV. Quad Core Processor.",
+    "heading": "LG 55\"(139cm) Curved OLED FHD 3D Smart TV",
+    "model": "55EG910T",
+    "price": 3295,
+    "wasprice": 3295
+  },
+  {
+    "sku": 50037396,
+    "brand": "Sony",
+    "categoryid": 186,
+    "catgrandparentid": 10,
+    "catparentid": 47,
+    "description": "Fun and accurate, this Sony TV is an excellent option to immerse yourself in the high-definition imagery.",
+    "heading": "Sony 49\"(124cm) UHD LED LCD Smart TV",
+    "model": "KD49X8000C",
+    "price": 1195,
+    "wasprice": 1195
+  }
+]</pre>
+
+        </div>
+
+      </section>
+
+
+      <hr>
+
+
+      <div class="progress-container">
+        <h3>Import Summary</h3>
+        <ul id="summary"></ul>
+      </div>
+
+
+    </main>
+
+  </article>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+</html>

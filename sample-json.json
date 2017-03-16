@@ -1,0 +1,26 @@
+[
+  {
+    "sku": 50037821,
+    "brand": "LG",
+    "categoryid": 186,
+    "catgrandparentid": 10,
+    "catparentid": 47,
+    "description": "No backlight for perfect blacks and explosive colours. Self-Lighting Pixels. webOS 2.0 Smart TV. Quad Core Processor.",
+    "heading": "LG 55\"(139cm) Curved OLED FHD 3D Smart TV",
+    "model": "55EG910T",
+    "price": 3295,
+    "wasprice": 3295
+  },
+  {
+    "sku": 50037396,
+    "brand": "Sony",
+    "categoryid": 186,
+    "catgrandparentid": 10,
+    "catparentid": 47,
+    "description": "Fun and accurate, this Sony TV is an excellent option to immerse yourself in the high-definition imagery.",
+    "heading": "Sony 49\"(124cm) UHD LED LCD Smart TV",
+    "model": "KD49X8000C",
+    "price": 1195,
+    "wasprice": 1195
+  }
+]
