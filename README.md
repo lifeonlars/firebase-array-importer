@@ -4,6 +4,8 @@ This basic import scripts allows you to import a local JSON file containing an a
 
 The script will parse through each object inte array and push them into Firebase to Push each object in the array into Firebase generating a new push key for each new object.
 
+**[Demo](https://lifeonlars.github.io/firebase-array-importer/)**
+
 
 ## What do I need to get this working?
 
